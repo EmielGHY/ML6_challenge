@@ -77,7 +77,7 @@ Check if you are able to get a prediction out of the `gcloud` command. If you ge
 
 ```
 CLASSES  PROBABILITIES
-1        [2.0589146706995187e-12, 1.0, 1.7370329621294728e-13, 1.2870057122347237e-32, 1.7370329621294728e-13]
+1        [0.004145291168242693, 0.9800060987472534, 0.004468264523893595, 0.007732450030744076, 0.0036478929687291384]
 ```
 
 The values you use for the `$MODEL_NAME` variable and the `$VERSION` variable can be found in your project on the Google Cloud web interface. You will need these values and your Google Cloud *Project ID* to submit your coding test.
