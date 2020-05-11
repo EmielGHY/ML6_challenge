@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Model to classify mugs
+"""Model to classify draft beers
 
 This file contains all the model information: the training steps, the batch
 size and the model itself.
@@ -23,7 +23,7 @@ def get_epochs():
 def solution(input_layer):
     """Returns a compiled model.
 
-    This function is expected to return a model to identity the different mugs.
+    This function is expected to return a model to identity the different beers.
     The model's outputs are expected to be probabilities for the classes and
     and it should be ready for training.
     The input layer specifies the shape of the images. The preprocessing

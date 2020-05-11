@@ -14,7 +14,7 @@ Before you begin to implement your classification model you need to download the
 gsutil -m cp -R gs://ml6_junior_ml_engineer_challenge_cv_beer_data/data .
 ```
 
-For your purposes, the data has already been split into training data and evaluation data. They are respectively in the `train` folder and `eval` folder. In each you will find four folders which represent the mugs you'll need to classify. There are four kinds of draft beer: Chimay Blue, Orval, Rochefort 10, Westmalle Tripel and Westvleteren 12. The classes are numbered 0 to 4 respectively. These class numbers are necessary to create a correct classifier. If you want, you can inspect the data, however, the code to load the images into NumPy arrays is already written for you.
+For your purposes, the data has already been split into training data and evaluation data. They are respectively in the `train` folder and `eval` folder. In each you will find four folders which represent the beers you'll need to classify. There are five kinds of draft beer: Chimay Blue, Orval, Rochefort 10, Westmalle Tripel and Westvleteren 12. The classes are numbered 0 to 4 respectively. These class numbers are necessary to create a correct classifier. If you want, you can inspect the data, however, the code to load the images into NumPy arrays is already written for you.
 
 
 ## The Models
@@ -37,12 +37,12 @@ Make sure you'll think about the solution you will submit for this coding test. 
 
 ![Data overview](data.png)
 
-The command above uses the `task.py` file. As you can see in the figure above, this file only uses the mug images in the `train` folder and uses the images in the `eval` folder to evaluate the model. This is excellent to test how the model performs but to obtain a better evaluation one can also train upon all available data which should increase the performance on the dataset you will be evaluated on. After you finished your solution in `model.py`, you can continue reading to learn how to train your model on the full dataset.
+The command above uses the `task.py` file. As you can see in the figure above, this file only uses the beer images in the `train` folder and uses the images in the `eval` folder to evaluate the model. This is excellent to test how the model performs but to obtain a better evaluation one can also train upon all available data which should increase the performance on the dataset you will be evaluated on. After you finished your solution in `model.py`, you can continue reading to learn how to train your model on the full dataset.
 
 
 ## Deploying the Model
 
-Once you've got the code working you will need to deploy the model to Google Cloud to turn it into an API that can receive new images of mugs and returns its prediction them. Don't worry, the code for this is already written in the `final_task.py` file. To deploy your model, you only have to run a few commands in your command line.
+Once you've got the code working you will need to deploy the model to Google Cloud to turn it into an API that can receive new images of draft beers and returns its prediction them. Don't worry, the code for this is already written in the `final_task.py` file. To deploy your model, you only have to run a few commands in your command line.
 
 To export your trained model and to train your model on the images in the `train` and `eval` folder you have to execute the following command (only do this once you've completed coding the `model.py` file):
 
@@ -82,7 +82,7 @@ CLASSES  PROBABILITIES
 
 The values you use for the `$MODEL_NAME` variable and the `$VERSION` variable can be found in your project on the Google Cloud web interface. You will need these values and your Google Cloud *Project ID* to submit your coding test.
 
-To be able to pass the coding test. You should be able to get an accuracy of 75% on our secret dataset of mugs (which you don't have access to). If your accuracy however seems to be less than 75% after we evaluated it, you can just keep submitting solutions until you are able to get an accuracy of 75%.
+To be able to pass the coding test. You should be able to get an accuracy of 75% on our secret dataset of beers (which you don't have access to). If your accuracy however seems to be less than 75% after we evaluated it, you can just keep submitting solutions until you are able to get an accuracy of 75%.
 
 
 ### Submitting your Coding Test
@@ -92,8 +92,8 @@ Once you are able to execute the command above without errors, you can add us to
 * Go to the menu of your project
 * Click *IAM & admin*
 * Click *Add*
-* Add `ml-eng-mug-evaluator@recruiting-220608.iam.gserviceaccount.com`as a member with the role *Project Owner*
+* Add `TODO: add correct service account`as a member with the role *Project Owner*
 
-After you added us to your project you should fill in [this form](https://docs.google.com/forms/d/1AmvTI_FEEo-fjyQKSJTqj3H2rqdvtSNty-Nxd0SdiLY) so we are able to automatically evaluate your solution to the coding test. Once you've filled in the form you should receive an email with the results within 2 hours. We'll hope with you that your results are good enough to land an interview at ML6. If however you don't you can resubmit a new solution as many times as you want, so don't give up!
+After you added us to your project you should fill in [this form](TODO: add correct google form) so we are able to automatically evaluate your solution to the coding test. Once you've filled in the form you should receive an email with the results within 2 hours. We'll hope with you that your results are good enough to land an interview at ML6. If however you don't you can resubmit a new solution as many times as you want, so don't give up!
 
 If you are invited for an interview at ML6 afterwards, make sure to bring your laptop with a copy of the code you wrote, so you can explain your `model.py` file to us.

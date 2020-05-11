@@ -13,7 +13,7 @@ import cv2
 def create_data_with_labels(dataset_dir):
     """Gets numpy data and label array from images that are in the folders
     that are in the folder which was given as a parameter. The folders
-    that are in that folder are identified by the mug they represent and
+    that are in that folder are identified by the beers they represent and
     the folder name starts with the label.
 
     Parameters:
@@ -51,13 +51,13 @@ def collect_paths_to_files(dataset_dir):
         paths as values.
     """
     dataset_dir = Path(dataset_dir)
-    mug_dirs = [f for f in os.listdir(dataset_dir) if not f.startswith('.')]
+    beer_dirs = [f for f in os.listdir(dataset_dir) if not f.startswith('.')]
     image_paths_per_label = {
         label: [
-            dataset_dir / mug_dir / '{0}'.format(f)
-            for f in os.listdir(dataset_dir / mug_dir) if not f.startswith('.')
+            dataset_dir / beer_dir / '{0}'.format(f)
+            for f in os.listdir(dataset_dir / beer_dir) if not f.startswith('.')
         ]
-        for label, mug_dir in enumerate(mug_dirs)
+        for label, beer_dir in enumerate(beer_dirs)
     }
     return image_paths_per_label
 
