@@ -5,6 +5,11 @@ Completing the test should take about half a day if you have the relevant experi
 
 In this test, you will try to classify Belgium draft beers. If you are able to complete this test in a decent way, you might soon be drinking one of these together with us.
 
+You can start by cloning this repository to a local and/or private location via:
+
+```
+git clone git@bitbucket.org:ml6team/challenge-classify-draft-beer.git
+```
 
 ## The Data
 
@@ -56,7 +61,7 @@ Once you've executed this command, you will notice that the `output` folder was 
 
 In order to do so you will need to create a [Google Cloud account](https://cloud.google.com/). You will need a credit card for this, but you'll get free credit from Google to run your AI Platform instance.
 
-Once you've created your Google Cloud account, you'll need to deploy your model on a project you've created. You can follow a [Google Guide](https://cloud.google.com/ai-platform/prediction/docs/deploying-models#deploy_models_and_versions) for this.
+Once you've created your Google Cloud account, you'll need to deploy your model on a project you've created. You can follow a [Google Guide](https://cloud.google.com/ai-platform/prediction/docs/deploying-models#deploy_models_and_versions) for this. Make sure to deploy the model using Tensorflow 2.1 and use a European region.
 
 
 ## Checking your Deployed Model

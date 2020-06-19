@@ -53,7 +53,6 @@ def export_model(ml_model, export_dir, model_dir='exported_model'):
         model_dir: A string specifying the name of the directory to
             which the model is written.
     """
-    ml_model.layers.pop(0)
     prediction_input = tf.keras.Input(
         dtype=tf.string, name='bytes', shape=())
     prediction_output = tf.keras.layers.Lambda(
@@ -112,6 +111,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     tf_logger = logging.getLogger("tensorflow")
     tf_logger.setLevel(logging.INFO)
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = str(tf_logger.level / 10)
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = str(tf_logger.level // 10)
 
     train_and_export_model(args)
