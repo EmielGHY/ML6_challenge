@@ -47,6 +47,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
     tf_logger = logging.getLogger("tensorflow")
     tf_logger.setLevel(logging.INFO)
-    os.environ['TF_CPP_MIN_LOG_LEVEL'] = str(tf_logger.level / 10)
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = str(tf_logger.level // 10)
 
     train_model(args)
