@@ -7,18 +7,25 @@ size and the model itself.
 """
 
 import tensorflow as tf
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
+
+from tensorflow import keras
+from keras import layers
+from keras.models import Sequential
 
 def get_batch_size():
     """Returns the batch size that will be used by your solution.
     It is recommended to change this value.
     """
-    return 1
+    return 256
 
 def get_epochs():
     """Returns number of epochs that will be used by your solution.
     It is recommended to change this value.
     """
-    return 1
+    return 50
 
 def solution(input_layer):
     """Returns a compiled model.
@@ -38,8 +45,26 @@ def solution(input_layer):
         model: A compiled model
     """
 
+    num_classes = 5
+    model = Sequential([
+        input_layer,
+        layers.Conv2D(16, 3, padding='same', activation='relu'),
+        layers.MaxPooling2D(),
+        layers.Conv2D(32, 3, padding='same', activation='relu'),
+        layers.MaxPooling2D(),
+        layers.Conv2D(64, 3, padding='same', activation='relu'),
+        layers.MaxPooling2D(),
+        layers.Flatten(),
+        layers.Dense(128, activation='relu'),
+        layers.Dense(num_classes)
+    ])
+
+    model.compile(optimizer='adam',
+                  loss=tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True),
+                  metrics=['BinaryAccuracy'])
+
     # TODO: Code of your solution
-    model = None
+    model = model
 
     # TODO: Return the compiled model
     return model
